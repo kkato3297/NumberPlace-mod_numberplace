@@ -1,0 +1,75 @@
+body {
+	background: #eeeeee;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+.frame {
+	position: relative;
+	width: 100vmin;
+	height: 100vmin;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.base {
+	display: table;
+	background: white;
+	border-collapse: collapse;
+	border: 3px solid #000000;
+	width: 100%;
+	height: 100%;
+}
+.cell {
+	display: table-cell;
+	width: calc(100% / 9);
+	height: calc(100% / 9);
+	border: 1px solid #000000;
+	box-sizing: border-box;
+
+	/* 中央揃え用 */
+	vertical-align: middle;
+	text-align: center;
+
+	position: relative;
+}
+.row {
+	display: table-row;
+}
+.cell.separator {
+	border-right: 3px solid #000000;
+}
+.row.separator {
+	border-bottom: 3px solid #000000;
+}
+.cell .userInput {
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	border: 0px;
+	text-align: center;
+	font-size: 6vmin;
+	font-family: Arial;
+	font-weight: bold;
+	box-sizing: border-box;
+}
+.cell .userInput:active,
+.cell .userInput:focus {
+	background: #5a3fe0;
+}
+.cell .userInput.Error {
+	background: #ff0000;
+	color: #ffffff;
+}
+/* フォント関連 */
+.cell,
+.cell .userInput {
+	font-size: 6vmin;
+	font-family: Arial;
+	font-weight: bold;
+}
